@@ -1,0 +1,46 @@
+<link href="https://fonts.googleapis.com/css?family=KoHo:400,700|Libre+Baskerville" rel="stylesheet">
+
+<section id="tasked">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="task">
+        <label for="mytask">Enter your task</label>
+        <input type="text" name="mytask" id="mytask" [(ngModel)]="newTask">
+        <a href="#" class="btn btn-primary" (click)="addTask()">Добавить задачу</a>
+
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="task-list">
+        <h3>{{taskTitle}}</h3>
+        <table class="table table-bordered text-center task-item">
+          <thead>
+          <tr scope="row">
+            <th>#</th>
+            <th>Задача</th>
+            <th>Управление</th>
+
+          </tr>
+          </thead>
+          <tbody>
+          <tr [ngClass]="{taskok: task.status}" *ngFor = "let task of todoes; let i = index">
+
+            <td class="task-id">{{task.id}}</td>
+            <td >{{task.task}}</td>
+            <td>
+              <div class="task-control">
+                <a href="#" class="btn btn-primary task-status" (click)="togleStatus(task,i)">Ok</a>
+                <a href="#" class="btn btn-danger task-status" (click)="removeTodo(i)">del</a>
+              </div>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>

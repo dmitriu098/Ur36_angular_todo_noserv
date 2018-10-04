@@ -1,0 +1,65 @@
+#tasked{
+  padding-top:25px;
+  padding-bottom:30px;
+  min-height:80vh;
+
+  background: yellow;
+
+}
+
+.task{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.task label, .task-list h3{
+  margin-bottom:20px;
+  font-size: 25px;
+  font-family: 'KoHo', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.task input{
+  width:80%;
+  outline: none;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  color:orangered;
+  padding:5px 10px;
+  margin-bottom:20px;
+}
+
+
+.task-item thead tr{
+  background:blue;
+}
+.task-item tr{
+  background:lightgrey;
+
+}
+
+.task-item .taskok{
+  background:green;
+  color:#fff;
+  text-decoration: line-through;
+}
+
+
+
+.task-id{
+  font-weight: 700;
+
+}
+.task-status{
+  width:50px;
+  padding:0;
+  font-size:14px;
+  font-weight: 700;
+  margin-right:20px;
+  text-transform: uppercase;
+  border:2px solid red;
+}
+.task-status:first-child{
+  background:green;
+
+}
